@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home_page</title>
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #f3f4f6;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center-content {
+            text-align: center;
+            align-items: center;
+        }
+        .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    </style>
+</head>
+<body>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+        <b>Welcome to Virtual Math Project</b>
+      </nav>
+      <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+        {% load static %}
+        <img alt="content" class="object-cover object-center h-10 w-10" src="{% static 'img.png' %}">
+        <span class="ml-3 text-xl">Maths in Various Field</span>
+      </a>
+      <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+        <div class="dropdown">
+          <button class="dropbtn">Projects</button>
+          <div class="dropdown-content">
+            <a href="/num">Project-1</a><br>
+            <a href="/pred">Project-2</a><br>
+            <a href="#">Project-3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+      <div class="rounded-lg h-auto overflow-hidden">
+    {% load static %}
+    <img alt="content" class="object-cover object-center h-auto w-auto" src="{% static 'img1.png' %}">
+  </div>
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Mathematics in Real Life</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Mathematics is a one of the greatest tool of mankind from a simple design of a dog house to finding the right path for a space shuttle all involve maths this is a small showcase of great capacity of math</p>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                  {% load static %}
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="{% static 'i1mage.png' %}">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-purple-500 mb-1">3D Geometry</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Stellar parallax</h1>
+                  <p class="leading-relaxed">
+                    Stellar parallax is the apparent shift of nearby stars against distant ones due to Earth's orbit. This minuscule shift, largest every six months, forms the basis of the stellar parallax method for determining stellar distances.</p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                  {% load static %}
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="{% static 'im1age.png' %}">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-purple-500 mb-1">Calculus</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">in Architecture</h1>
+                  <p class="leading-relaxed">optimizing design elements to ensure structural integrity and efficiency. In the construction of iconic structures like the Eiffel Tower, calculus was employed to calculate wind resistance</p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                  {% load static %}
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="{% static 'ima1ge.png' %}">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-purple-500 mb-1">Number Theory</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Cryptography</h1>
+                  <p class="leading-relaxed">Number Theory and Cryptography is a field of mathematics that studies the properties of numbers and their relations to encryption and decryption12. Number theory provides tools for creating and breaking codes, such as divisibility, congruences, modular arithmetic, and prime numbers</p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                  {% load static %}
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="{% static 'i2mage.png' %}">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-purple-500 mb-1">Geometry</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Computer Graphics</h1>
+                  <p class="leading-relaxed">Graphics are defined as any sketch or a drawing or a special network that pictorially represents some meaningful information. Computer Graphics is used where a set of images needs to be manipulated or the creation of the image in the form of pixels and is drawn on the computer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                  {% load static %}
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="{% static 'im2age.png' %}">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-purple-500 mb-1">Catesean geometry</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Satellite imagery</h1>
+                  <p class="leading-relaxed">Math is essential for the precise positioning of satellites. It’s used to calculate orbits, determine satellite locations, and ensure the accuracy of the imagery collected Satellite images often require geometric corrections to account for the Earth’s curvature, the satellite’s motion, and its perspective.</p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                  {% load static %}
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="{% static 'ima2ge.png' %}">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-purple-500 mb-1">Permutation and combination</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Logistics</h1>
+                  <p class="leading-relaxed">In logistics and operations research, it’s really important to be efficient. The key is to figure out the best way to use resources to make things work better and cost less. Whether it’s planning delivery routes for trucks, scheduling work shifts, or managing a factory, using different combinations of resources can help a lot.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br>
+      <div class="content center-content">
+        <div class="flex-grow">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Project-1 Number system</h2>
+            <p class="leading-relaxed text-base"><b>Balancing Chemical Equation using Linear Equations</b> this program split the equation into compounds and then in elements and forms linear equation and solve them for a solution</p>
+            <a class="mt-3 text-purple-500 inline-flex items-center" href="/num">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          {% load static %}
+    <a data-v-7b1d768e="" href="/num" class="link" style="background: none;"><img onload="true" alt="Infinite Craft" src="{% static 'Designer (2).png' %}" height="200" width="400" loading="lazy" class="link-img" style="opacity: 1;"></a>
+</div>
+      <br>
+      <div class="content center-content">
+        {% load static %}
+    <a data-v-7b1d768e="" href="/pred" class="link" style="background: none;"><img onload="true" alt="Infinite Craft" src="{% static 'imag1e.png' %}" height="200" width="600" loading="lazy" class="link-img" style="opacity: 1;"></a>
+    <div class="flex-grow">
+        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Project-2 Probability and Statistics</h2>
+        <p class="leading-relaxed text-base"><b>Predicting stocks by using probabilty</b> this program trains the model with past record of stocks and try to predict the rise or fall of stocks every event is predictable to a certain extent</p>
+        <a class="mt-3 text-purple-500 inline-flex items-center" href="/pred">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+</div>
+      <br>
+      <div class="content center-content">
+        <div class="flex-grow">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Project-3</h2>
+            <p class="leading-relaxed text-base">Embark on a journey through the cosmos with our exploration of a solar system model, unveiling the intricate beauty of space through the lens of stellar parallax and the celestial sphere. Welcome to our stellar presentation.</p>
+            <a class="mt-3 text-purple-500 inline-flex items-center" href="space/">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          {% load static %}
+    <a data-v-7b1d768e="" href="space/" class="link" style="background: none;"><img onload="true" height="200" width="600" alt="Infinite Craft" src="{% static 'image.png' %}" loading="lazy" class="link-img" style="opacity: 1;"></a>
+</div>
+<footer class="text-gray-600 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      {% load static %}
+      <img alt="content" class="object-cover object-center h-10 w-10" src="{% static 'img.png' %}">
+      <span class="ml-3 text-xl">B.C.M 32sec</span>
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 Non-Med-B —
+      <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@tanushgoyal</a>
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <h2>thank you</h2>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

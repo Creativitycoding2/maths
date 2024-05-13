@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload</title>
+  <style>
+  
+    
+
+  .video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%; /* 16:9 aspect ratio (9 / 16 * 100) */
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+    </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+ 
+</head>
+<body>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+        <b>Welcome to Probabilty project - 2</b>
+      </nav>
+      <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+        {% load static %}
+        <img alt="content" class="object-cover object-center h-10 w-10" src="{% static 'img.png' %}">
+        <span class="ml-3 text-xl">Probabilty</span>
+      </a>
+      <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+        <a href="/"><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Back
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button></a>
+      </div>
+    </div>
+  </header>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-col">
+      <div class="lg:w-4/6 mx-auto">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="{% load static %}{% static 'img_1.png'%}">
+        </div>
+        <div class="flex flex-col sm:flex-row mt-10">
+          <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Kq7e6cj2nDw?si=FdjMK_L6_88M-kMh" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+            <p class="leading-relaxed text-lg mb-4">Much like the unpredictable path of a falling ball through a Galton board, predicting stock movements involves navigating uncertainty with probability. By applying regression models, we attempt to discern patterns amidst the chaos, aiming to forecast whether stocks will rise or fall. These models rely on historical data to assign probabilities to future outcomes, offering insights to investors in navigating the volatile landscape of financial markets. Just as the Galton board demonstrates the principles of randomness and distribution, our regression model seeks to provide a glimpse into the probabilistic nature of stock market dynamics, aiding decision-making in the face of uncertainty.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+      <div class="lg:w-full md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+        <h1 class="title-font font-medium text-3xl text-gray-900">Probabilty Project-2</h1>
+        <p class="leading-relaxed mt-4">Regression model it analyses the history of given stocks find order in chaos and try to predict wether the stocks will rise or fall</p>
+      </div>
+      <div class="lg:w-full md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Upload File</h2>
+        <form action="stock_prediction/" method="post" enctype="multipart/form-data">{% csrf_token %}
+        <div class="relative mb-4">
+          <input type="file" id="formFileLg" name="fileUpload" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">submit</button>
+        </form>
+        <p class="text-xs text-gray-500 mt-3">yours stocks will be analysed and future outcomes will be predicted</p>
+      </div>
+    </div>
+  </section>
+  </div>
+  <!--<div>
+    <br>
+    <div>
+      <input id="formFileLg" type="file">
+    </div>
+    <button type="submit">submit</button>  
+</div>-->
+<footer class="text-gray-600 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      {% load static %}
+      <img alt="content" class="object-cover object-center h-10 w-10" src="{% static 'img.png' %}">
+      <span class="ml-3 text-xl">B.C.M 32sec</span>
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 Non-Med-B —
+      <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@tanushgoyal</a>
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <h2>thank you</h2>
+    </span>
+  </div>
+</footer>
+</body>
+</html>
